@@ -1,8 +1,8 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
 
-// Import the image (make sure to adjust the path based on your project structure)
-import amitImage from '/src/assets/images/amit.png';
+// // Import the image (make sure to adjust the path based on your project structure)
+// import amitImage from '/src/assets/images/amit.png';
 
 const aboutTabs = [
   {
@@ -215,13 +215,13 @@ export default function AboutSection() {
                 className="relative w-full h-48 rounded-lg overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200"
               >
                 {/* Profile Image */}
-                <img
+                {/* <img
                   src={amitImage}
                   alt="Amit Kumar"
                   className="absolute inset-0 w-full h-full object-cover"
                   loading="lazy"
                   onLoad={() => setImageLoaded(true)}
-                />
+                /> */}
                 
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
@@ -470,14 +470,14 @@ export default function AboutSection() {
                 transition={{ duration: 0.5 }}
                 className="relative w-full h-48 rounded-xl overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 mb-3"
               >
-                {/* Profile Image */}
+                {/* Profile Image
                 <img
                   src={amitImage}
                   alt="Amit Kumar"
                   className="absolute inset-0 w-full h-full object-cover"
                   loading="lazy"
                   onLoad={() => setImageLoaded(true)}
-                />
+                /> */}
                 
                 {/* Gradient Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
