@@ -58,7 +58,7 @@ export default function Navbar() {
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
           >
-            <span className="bg-linear-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
               AmitKumar
             </span>
           </motion.div>
@@ -81,7 +81,7 @@ export default function Navbar() {
 
             <button
               onClick={handleFollowClick}
-              className="ml-2 px-5 py-2 text-sm font-medium text-white bg-linear-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 rounded-lg transition-all shadow-sm hover:shadow-md cursor-pointer"
+              className="ml-2 px-5 py-2 text-sm font-medium text-white bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 rounded-lg transition-all shadow-sm hover:shadow-md cursor-pointer"
             >
               Follow
             </button>
@@ -154,7 +154,7 @@ export default function Navbar() {
 
               <button
                 onClick={handleFollowClick}
-                className="w-full mt-2 px-4 py-3 text-sm font-medium text-white bg-linear-to-r from-indigo-600 to-purple-600 rounded-xl"
+                className="w-full mt-2 px-4 py-3 text-sm font-medium text-white bg-gradient-to-r from-indigo-600 to-purple-600 rounded-xl"
               >
                 Follow
               </button>
