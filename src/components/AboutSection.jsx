@@ -29,29 +29,27 @@ const aboutContent = {
   about: {
     title: "Amit Kumar",
     subtitle: "Digital Creator & Restaurateur",
-    description: "Blending digital creativity with authentic culinary experiences. Over 5 years in content creation and hospitality management.",
+    description: "Hi, I’m Amit Kumar, a digital content creator and restaurateur from Solapur. I create entertaining and relatable content on social media, and I also run Paradise Hyderabad Biryani in Vijapur . Over the years, I’ve learned how creativity and hospitality go hand in hand, whether it’s connecting with people through content or serving authentic food with consistency and care.",
     stats: [
-      { value: "5+", label: "Years", icon: "📅" },
-      { value: "500K+", label: "Followers", icon: "👥" },
-      { value: "10M+", label: "Views", icon: "📈" },
-      { value: "5★", label: "Rating", icon: "⭐" }
+      { value: "2+", label: "Years", icon: "📅" },
+      { value: "1000+", label: "Followers", icon: "👥" },
+      { value: "100K+", label: "Views", icon: "📈" },
+    
     ],
     highlights: [
-      "Content creator since 2019",
+      "Content creator since 2024",
       "Restaurant owner since 2021",
       "Social media expert",
-      "Authentic Hyderabadi cuisine"
     ]
   },
   creator: {
     title: "Content Creator",
     subtitle: "Creating Viral Moments",
-    description: "Specializing in engaging, relatable content that resonates with audiences. Building a loyal community through authentic storytelling.",
+    description: "I’m a digital content creator who focuses on creating entertaining and relatable videos that connect with people through humor, everyday moments, and real-life experiences.",
     stats: [
-      { value: "500+", label: "Reels", icon: "🎥" },
-      { value: "10M+", label: "Views", icon: "👁️" },
+      { value: "150+", label: "Reels", icon: "🎥" },
+      { value: "100K+", label: "Views", icon: "👁️" },
       { value: "98%", label: "Engagement", icon: "🔥" },
-      { value: "50+", label: "Brands", icon: "🤝" }
     ],
     features: [
       {
@@ -73,12 +71,12 @@ const aboutContent = {
   },
   hotel: {
     title: "Paradise Biryani",
-    subtitle: "Authentic Hyderabadi Cuisine",
-    description: "Serving traditional Hyderabadi flavors with modern excellence. A local favorite known for quality and authenticity.",
+    subtitle: "Hyderabadi Biryani & Traditional Flavors",
+    description: "I run Paradise Hyderabad Biryani in Vijapur, where we focus on serving authentic Hyderabadi biryani made with rich flavors, quality ingredients, and consistent taste.",
     stats: [
       { value: "4.8/5", label: "Rating", icon: "⭐" },
-      { value: "1000+", label: "Orders/Day", icon: "🍛" },
-      { value: "50+", label: "Menu Items", icon: "📋" },
+      { value: "100+", label: "Orders/Day", icon: "🍛" },
+      { value: "20+", label: "Menu Items", icon: "📋" },
       { value: "24/7", label: "Service", icon: "⏰" }
     ],
     features: [
@@ -246,11 +244,11 @@ export default function AboutSection() {
               {/* Stats */}
               <div className="grid grid-cols-2 gap-2 mb-4">
                 <div className="text-center p-2 bg-white/80 rounded-lg border border-gray-100">
-                  <div className="text-sm font-bold text-gray-900">500K+</div>
+                  <div className="text-sm font-bold text-gray-900">100K+</div>
                   <div className="text-xs text-gray-500">Followers</div>
                 </div>
                 <div className="text-center p-2 bg-white/80 rounded-lg border border-gray-100">
-                  <div className="text-sm font-bold text-gray-900">5★</div>
+                  <div className="text-sm font-bold text-gray-900">4.4★</div>
                   <div className="text-xs text-gray-500">Rating</div>
                 </div>
               </div>
@@ -443,12 +441,9 @@ export default function AboutSection() {
               }}
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className="flex items-center justify-center gap-2 p-3 bg-gradient-to-r from-orange-500/10 to-red-500/10 rounded-lg border border-orange-200/50 hover:border-orange-300 transition-colors"
+              
             >
-              <svg className="w-4 h-4 text-orange-600" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
-              </svg>
-              <span className="text-xs font-medium text-orange-700">Order Food</span>
+             
             </motion.a>
           </div>
         </motion.div>
@@ -503,11 +498,11 @@ export default function AboutSection() {
             {/* Stats */}
             <div className="grid grid-cols-2 gap-2 mb-4">
               <div className="text-center p-2 bg-white/80 rounded-lg border border-gray-100">
-                <div className="text-sm font-bold text-gray-900">500K+</div>
+                <div className="text-sm font-bold text-gray-900">100K+</div>
                 <div className="text-xs text-gray-500">Followers</div>
               </div>
               <div className="text-center p-2 bg-white/80 rounded-lg border border-gray-100">
-                <div className="text-sm font-bold text-gray-900">5★</div>
+                <div className="text-sm font-bold text-gray-900">4.4★</div>
                 <div className="text-xs text-gray-500">Rating</div>
               </div>
             </div>
@@ -529,16 +524,6 @@ export default function AboutSection() {
                   Follow on Instagram
                 </motion.a>
                 
-                <motion.button
-                  onClick={() => scrollToSection('contact')}
-                  whileHover={{ x: 3 }}
-                  className="flex items-center gap-2 text-xs text-orange-600 hover:text-orange-700 transition-colors"
-                >
-                  <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M2.25 2.25a.75.75 0 000 1.5h1.386c.17 0 .318.114.362.278l2.558 9.592a3.752 3.752 0 00-2.806 3.63c0 .414.336.75.75.75h15.75a.75.75 0 000-1.5H5.378A2.25 2.25 0 017.5 15h11.218a.75.75 0 00.674-.421 60.358 60.358 0 002.96-7.228.75.75 0 00-.525-.965A60.864 60.864 0 005.68 4.509l-.232-.867A1.875 1.875 0 003.636 2.25H2.25zM3.75 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0zM16.5 20.25a1.5 1.5 0 113 0 1.5 1.5 0 01-3 0z" />
-                  </svg>
-                  Order Food Online
-                </motion.button>
               </div>
             </div>
           </div>
