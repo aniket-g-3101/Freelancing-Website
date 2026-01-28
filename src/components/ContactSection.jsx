@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
+import BackgroundGrid from "../background/BackgroundGrid";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -66,6 +67,7 @@ export default function ContactSection() {
 
   return (
     <section id="contact" className="relative py-10 md:py-14 overflow-hidden bg-white">
+      <BackgroundGrid />
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/4 right-0 w-40 h-40 bg-gradient-to-br from-indigo-50/15 to-purple-50/15 rounded-full blur-xl" />

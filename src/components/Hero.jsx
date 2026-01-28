@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import BackgroundGrid from "../background/BackgroundGrid";
 
 export default function Hero() {
   const [isVisible, setIsVisible] = useState(false);
@@ -720,7 +721,7 @@ export default function Hero() {
         id="hero"
         className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-gray-50/80 to-indigo-50/40 py-8 md:py-0"
       >
-        {/* Enhanced Background Effects Layer */}
+        {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {/* Base Mesh Gradient */}
           <div className="bg-mesh-gradient"></div>

@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import BackgroundGrid from "../background/BackgroundGrid";
 
 export default function Footer() {
   const [isVisible, setIsVisible] = useState(false);
@@ -63,7 +64,7 @@ export default function Footer() {
           left: 100%;
         }
       `}</style>
-
+      
       {/* Top Divider */}
       <motion.div
         initial={{ scaleX: 0 }}
@@ -73,12 +74,14 @@ export default function Footer() {
       />
 
       {/* Main Footer */}
+      
       <motion.footer
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
         transition={{ duration: 0.5 }}
         className="relative bg-white"
       >
+        <BackgroundGrid />
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6">
           <div className="py-6 sm:py-8">
             {/* Brand & Social Row */}
