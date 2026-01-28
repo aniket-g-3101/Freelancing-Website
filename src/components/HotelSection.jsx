@@ -423,7 +423,7 @@ export default function HotelSection() {
               Experience authentic Hyderabadi biryani
             </p>
             <motion.a
-              href="https://maps.google.com"
+              href="https://maps.app.goo.gl/ioQ4K6ydqBCBxWJp8"
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.03 }}
