@@ -104,148 +104,334 @@ export default function Hero() {
           pointer-events: none;
         }
 
-        /* Base mobile styles */
-        .mobile-text-left {
-          text-align: left !important;
-          align-items: flex-start !important;
-        }
-        
-        .mobile-full-width {
-          width: 100% !important;
-          max-width: 100% !important;
-        }
-
         /* Mobile responsive styles */
         @media (max-width: 768px) {
           .mobile-stack {
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
+            gap: 2.5rem;
           }
           
-          /* Left align all text on mobile */
           .mobile-center {
             text-align: left !important;
             align-items: flex-start !important;
-            padding-left: 0.5rem;
-            padding-right: 0.5rem;
+            padding-left: 1rem;
+            padding-right: 1rem;
           }
           
           .mobile-heading {
-            font-size: 1.75rem;
+            font-size: 2rem;
+            line-height: 1.3;
+            margin-bottom: 0.75rem;
+          }
+          
+          .mobile-heading-large {
+            font-size: 2.25rem;
             line-height: 1.2;
             margin-bottom: 0.5rem;
           }
           
-          .mobile-heading-large {
-            font-size: 2rem;
-            line-height: 1.1;
-            margin-bottom: 0.25rem;
-          }
-          
           .mobile-subheading {
-            font-size: 1.35rem;
-            line-height: 1.3;
+            font-size: 1.5rem;
+            line-height: 1.4;
           }
           
-          /* Premium Badge - Left aligned and compact */
           .mobile-badge {
             margin-left: 0 !important;
             margin-right: auto !important;
-            padding: 0.5rem 1rem !important;
-            margin-bottom: 1rem !important;
+            padding: 0.625rem 1.25rem !important;
+            margin-bottom: 1.5rem !important;
+            font-size: 0.875rem !important;
           }
           
+          /* LARGER BUTTONS */
           .mobile-btn {
-            padding: 0.625rem 1.25rem;
-            font-size: 0.75rem;
-            min-width: 120px;
-            height: 2.75rem;
+            padding: 0.875rem 1.5rem !important;
+            font-size: 0.875rem !important;
+            min-width: 140px !important;
+            height: 3rem !important;
+            border-radius: 10px !important;
           }
           
           .mobile-btn-group {
             display: flex;
             flex-direction: row;
-            gap: 0.5rem;
+            gap: 1rem !important;
             justify-content: flex-start;
             width: 100%;
-            flex-wrap: nowrap;
-            overflow-x: auto;
+            flex-wrap: wrap;
             padding-bottom: 0.5rem;
           }
           
-          /* Stats Grid - More compact */
           .mobile-stats {
-            gap: 0.5rem;
-            margin-bottom: 1.5rem !important;
+            gap: 0.75rem !important;
+            margin-bottom: 2rem !important;
           }
           
           .mobile-stats > div {
-            padding: 0.625rem 0.5rem !important;
+            padding: 0.75rem 0.5rem !important; /* Reduced padding */
             min-height: auto !important;
-            height: 4.5rem;
+            height: auto !important; /* Changed to auto */
+            min-height: 4.5rem !important; /* Added min-height */
             display: flex;
             flex-direction: column;
             justify-content: center;
+            border-radius: 12px !important;
+          }
+          
+          .mobile-stats-icon {
+            font-size: 1.25rem !important; /* Slightly smaller */
+            margin-bottom: 0.375rem !important;
+          }
+          
+          .mobile-stats-number {
+            font-size: 1.125rem !important; /* Smaller */
+            margin-bottom: 0.125rem !important;
+            line-height: 1.1;
+          }
+          
+          .mobile-stats-label {
+            font-size: 0.6875rem !important; /* Smaller */
+            line-height: 1.2;
+          }
+          
+          .mobile-simplify {
+            margin-top: 1rem !important;
+            transform: scale(1) !important;
+          }
+          
+          /* FIXED: Better sizing for dual passion box */
+          .dual-passion-box {
+            width: 100% !important;
+            max-width: 400px !important;
+            margin: 0 auto;
+            padding: 1.5rem !important; /* Reduced padding */
+            height: auto !important;
+            min-height: auto !important;
+            border-radius: 20px !important;
+          }
+          
+          /* FIXED: Adjusted stats boxes inside dual passion */
+          .dual-passion-stats {
+            gap: 0.75rem !important; /* Reduced gap */
+            margin-top: 1rem !important;
+          }
+          
+          .dual-passion-stat-item {
+            padding: 0.875rem 0.5rem !important; /* Reduced padding */
+            height: auto !important; /* Changed to auto */
+            min-height: 4rem !important; /* Reduced min-height */
+            border-radius: 12px !important;
+          }
+          
+          .dual-passion-stat-icon {
+            font-size: 1.25rem !important; /* Smaller */
+            margin-bottom: 0.375rem !important;
+          }
+          
+          .dual-passion-stat-number {
+            font-size: 1.125rem !important; /* Smaller */
+            margin-bottom: 0.125rem !important;
+            line-height: 1.1 !important;
+            font-weight: 700 !important;
+          }
+          
+          .dual-passion-stat-label {
+            font-size: 0.75rem !important; /* Smaller */
+            line-height: 1.2 !important;
+            font-weight: 600 !important;
+          }
+          
+          .profile-image-container {
+            width: 5rem !important; /* Smaller */
+            height: 5rem !important; /* Smaller */
+            margin-bottom: 1rem !important;
+          }
+          
+          .profile-icon {
+            font-size: 2rem !important; /* Smaller */
+          }
+          
+          .dual-passion-title {
+            font-size: 1.5rem !important; /* Smaller */
+            margin-bottom: 0.25rem !important;
+            font-weight: 700 !important;
+          }
+          
+          .dual-passion-subtitle {
+            font-size: 0.875rem !important; /* Smaller */
+            margin-bottom: 1rem !important;
+            font-weight: 500 !important;
+            color: #4b5563 !important;
+          }
+          
+          .mobile-subtitle {
+            font-size: 1.125rem !important;
+            line-height: 1.6 !important;
+            margin-bottom: 1.5rem !important;
+            color: #374151 !important;
+          }
+          
+          .bg-icon {
+            opacity: 0.1;
+            font-size: 18px !important;
+          }
+          
+          .bg-glow {
+            filter: blur(40px);
+          }
+        }
+
+        @media (max-width: 640px) {
+          .mobile-heading {
+            font-size: 1.875rem;
+          }
+          
+          .mobile-heading-large {
+            font-size: 2rem;
+          }
+          
+          .mobile-subheading {
+            font-size: 1.375rem;
+          }
+          
+          .mobile-btn {
+            padding: 0.75rem 1.25rem !important;
+            font-size: 0.8125rem !important;
+            min-width: 130px !important;
+            height: 2.75rem !important;
+          }
+          
+          .mobile-btn-group {
+            gap: 0.75rem !important;
+          }
+          
+          .mobile-stats {
+            gap: 0.625rem !important;
+          }
+          
+          .mobile-stats > div {
+            padding: 0.625rem 0.375rem !important; /* Smaller */
+            min-height: 4rem !important;
           }
           
           .mobile-stats-icon {
             font-size: 1.125rem !important;
-            margin-bottom: 0.375rem;
+            margin-bottom: 0.25rem !important;
           }
           
           .mobile-stats-number {
             font-size: 1rem !important;
-            margin-bottom: 0.125rem !important;
-            line-height: 1;
           }
           
-          .mobile-stats-label {
-            font-size: 0.65rem !important;
-            line-height: 1;
-          }
-          
-          .mobile-simplify {
-            margin-top: 0.5rem;
-            transform: scale(0.9);
-          }
-          
-          /* Dual Passion box - More compact */
+          /* Better sizing on 640px */
           .dual-passion-box {
-            width: 100% !important;
-            max-width: 320px !important;
-            margin: 0 auto;
-            padding: 1rem !important;
-            height: auto !important;
-            min-height: auto !important;
-          }
-          
-          /* Mini stats boxes adjustments for mobile - Ultra compact */
-          .dual-passion-stats {
-            gap: 0.375rem !important;
-            margin-top: 0.75rem !important;
+            max-width: 380px !important;
+            padding: 1.25rem !important; /* Smaller */
           }
           
           .dual-passion-stat-item {
-            padding: 0.5rem 0.375rem !important;
-            height: 3.5rem !important;
+            padding: 0.75rem 0.375rem !important; /* Smaller */
+            min-height: 3.75rem !important;
+          }
+          
+          .dual-passion-stat-number {
+            font-size: 1rem !important;
+          }
+          
+          .profile-image-container {
+            width: 4.5rem !important;
+            height: 4.5rem !important;
+            margin-bottom: 0.875rem !important;
+          }
+          
+          .dual-passion-title {
+            font-size: 1.375rem !important;
+          }
+          
+          .dual-passion-subtitle {
+            font-size: 0.8125rem !important;
+          }
+          
+          .mobile-subtitle {
+            font-size: 1rem !important;
+          }
+        }
+
+        @media (max-width: 480px) {
+          .mobile-heading {
+            font-size: 1.75rem;
+          }
+          
+          .mobile-heading-large {
+            font-size: 1.875rem;
+          }
+          
+          .mobile-subheading {
+            font-size: 1.25rem;
+          }
+          
+          .mobile-btn {
+            padding: 0.625rem 1rem !important;
+            font-size: 0.75rem !important;
+            min-width: 120px !important;
+            height: 2.5rem !important;
+          }
+          
+          .mobile-btn-group {
+            gap: 0.625rem !important;
+          }
+          
+          .mobile-stats {
+            gap: 0.5rem !important;
+          }
+          
+          .mobile-stats > div {
+            padding: 0.5rem 0.25rem !important; /* Much smaller */
             min-height: 3.5rem !important;
           }
           
-          .dual-passion-stat-icon {
-            font-size: 0.875rem !important;
+          .mobile-stats-icon {
+            font-size: 1rem !important;
             margin-bottom: 0.125rem !important;
+          }
+          
+          .mobile-stats-number {
+            font-size: 0.875rem !important;
+          }
+          
+          .mobile-stats-label {
+            font-size: 0.625rem !important;
+          }
+          
+          .mobile-simplify {
+            transform: scale(0.95) !important;
+          }
+          
+          .dual-passion-box {
+            max-width: 350px !important;
+            padding: 1rem !important; /* Much smaller */
+          }
+          
+          .dual-passion-title {
+            font-size: 1.25rem !important;
+          }
+          
+          .dual-passion-subtitle {
+            font-size: 0.75rem !important;
+          }
+          
+          .dual-passion-stat-item {
+            padding: 0.5rem 0.25rem !important; /* Much smaller */
+            min-height: 3.25rem !important;
           }
           
           .dual-passion-stat-number {
             font-size: 0.875rem !important;
-            margin-bottom: 0.0625rem !important;
-            line-height: 1 !important;
           }
           
           .dual-passion-stat-label {
-            font-size: 0.6rem !important;
-            line-height: 1 !important;
+            font-size: 0.625rem !important;
           }
           
           .profile-image-container {
@@ -258,307 +444,132 @@ export default function Hero() {
             font-size: 1.5rem !important;
           }
           
-          .dual-passion-title {
-            font-size: 1.125rem !important;
-            margin-bottom: 0.125rem !important;
-          }
-          
-          .dual-passion-subtitle {
-            font-size: 0.75rem !important;
-            margin-bottom: 0.5rem !important;
-          }
-          
-          /* Subtitle text - smaller and tighter */
           .mobile-subtitle {
-            font-size: 1rem !important;
-            line-height: 1.5 !important;
-            margin-bottom: 1rem !important;
-          }
-          
-          .bg-icon {
-            opacity: 0.1;
-            font-size: 16px;
-          }
-          
-          .bg-glow {
-            filter: blur(40px);
-          }
-        }
-
-        @media (max-width: 640px) {
-          .mobile-heading {
-            font-size: 1.625rem;
-          }
-          
-          .mobile-heading-large {
-            font-size: 1.875rem;
-          }
-          
-          .mobile-subheading {
-            font-size: 1.2rem;
-          }
-          
-          .mobile-btn {
-            padding: 0.5rem 1rem;
-            font-size: 0.7rem;
-            min-width: 110px;
-            height: 2.5rem;
-          }
-          
-          .mobile-btn-group {
-            gap: 0.375rem;
-          }
-          
-          .mobile-stats {
-            gap: 0.375rem;
-          }
-          
-          .mobile-stats > div {
-            padding: 0.5rem !important;
-            height: 4rem;
-          }
-          
-          .mobile-stats-icon {
-            font-size: 1rem !important;
-            margin-bottom: 0.25rem;
-          }
-          
-          .mobile-stats-number {
             font-size: 0.875rem !important;
-          }
-          
-          /* Dual Passion box - Even more compact */
-          .dual-passion-box {
-            max-width: 300px !important;
-            padding: 0.875rem !important;
-          }
-          
-          .dual-passion-stat-item {
-            padding: 0.375rem !important;
-            height: 3rem !important;
-            min-height: 3rem !important;
-          }
-          
-          .dual-passion-stat-number {
-            font-size: 0.75rem !important;
-          }
-          
-          .profile-image-container {
-            width: 3.5rem !important;
-            height: 3.5rem !important;
-            margin-bottom: 0.5rem !important;
-          }
-          
-          .dual-passion-title {
-            font-size: 1rem !important;
-          }
-          
-          .dual-passion-subtitle {
-            font-size: 0.6875rem !important;
-          }
-          
-          .mobile-subtitle {
-            font-size: 0.8125rem !important;
-          }
-        }
-
-        @media (max-width: 480px) {
-          .mobile-heading {
-            font-size: 1.25rem;
-          }
-          
-          .mobile-heading-large {
-            font-size: 1.375rem;
-          }
-          
-          .mobile-subheading {
-            font-size: 0.9375rem;
-          }
-          
-          .mobile-btn {
-            padding: 0.4375rem 0.875rem;
-            font-size: 0.65rem;
-            min-width: 100px;
-            height: 2.25rem;
-          }
-          
-          .mobile-btn-group {
-            gap: 0.25rem;
-          }
-          
-          .mobile-stats {
-            gap: 0.25rem;
-          }
-          
-          .mobile-stats > div {
-            padding: 0.375rem !important;
-            height: 3.5rem;
-          }
-          
-          .mobile-stats-icon {
-            font-size: 0.875rem !important;
-            margin-bottom: 0.125rem;
-          }
-          
-          .mobile-stats-number {
-            font-size: 0.75rem !important;
-          }
-          
-          .mobile-stats-label {
-            font-size: 0.6rem !important;
-          }
-          
-          .mobile-simplify {
-            transform: scale(0.85);
-          }
-          
-          /* Dual Passion box - Ultra compact */
-          .dual-passion-box {
-            max-width: 280px !important;
-            padding: 0.75rem !important;
-          }
-          
-          .dual-passion-title {
-            font-size: 0.9375rem !important;
-          }
-          
-          .dual-passion-subtitle {
-            font-size: 0.625rem !important;
-          }
-          
-          .dual-passion-stat-item {
-            padding: 0.25rem !important;
-            height: 2.75rem !important;
-            min-height: 2.75rem !important;
-          }
-          
-          .dual-passion-stat-number {
-            font-size: 0.6875rem !important;
-          }
-          
-          .dual-passion-stat-label {
-            font-size: 0.5625rem !important;
-          }
-          
-          .profile-image-container {
-            width: 3rem !important;
-            height: 3rem !important;
-            margin-bottom: 0.375rem !important;
-          }
-          
-          .profile-icon {
-            font-size: 1.25rem !important;
-          }
-          
-          .mobile-subtitle {
-            font-size: 0.75rem !important;
           }
         }
 
         @media (max-width: 360px) {
           .mobile-heading-large {
-            font-size: 1.25rem;
+            font-size: 1.75rem;
           }
           
           .mobile-subheading {
-            font-size: 0.875rem;
+            font-size: 1.125rem;
           }
           
           .mobile-btn {
-            padding: 0.375rem 0.75rem;
-            font-size: 0.6rem;
-            min-width: 90px;
-            height: 2rem;
+            padding: 0.5rem 0.875rem !important;
+            font-size: 0.6875rem !important;
+            min-width: 110px !important;
+            height: 2.25rem !important;
           }
           
           .mobile-stats > div {
-            padding: 0.25rem !important;
-            height: 3rem;
+            padding: 0.375rem 0.125rem !important; /* Minimal padding */
+            min-height: 3rem !important;
           }
           
           .mobile-stats-number {
-            font-size: 0.6875rem !important;
+            font-size: 0.75rem !important;
           }
           
           .dual-passion-box {
-            max-width: 260px !important;
-            padding: 0.625rem !important;
+            max-width: 320px !important;
+            padding: 0.875rem !important; /* Minimal padding */
+          }
+          
+          .dual-passion-title {
+            font-size: 1.125rem !important;
+          }
+          
+          .dual-passion-stat-item {
+            padding: 0.375rem 0.125rem !important; /* Minimal padding */
+            min-height: 3rem !important;
           }
         }
 
-        /* Desktop enhancements */
+        /* Desktop styles - OPTIMIZED AND SMALLER */
         @media (min-width: 769px) {
           .desktop-btn {
-            padding: 0.75rem 2rem;
+            padding: 0.875rem 2rem;
             font-size: 1rem;
-            margin-right: 1rem;
+            height: 3rem;
+            border-radius: 12px;
           }
           
           .desktop-stats > div {
-            padding: 1.25rem;
+            padding: 1rem; /* Reduced padding */
+            min-height: 4rem !important; /* Reduced height */
           }
           
           .desktop-heading {
-            font-size: 3.5rem;
+            font-size: 3.75rem;
             line-height: 1.1;
           }
           
           .desktop-subtitle {
-            font-size: 1.125rem;
+            font-size: 1.25rem;
             line-height: 1.6;
           }
           
-          /* Desktop mini stats boxes - More compact */
+          /* SMALLER Desktop dual passion stats */
           .dual-passion-stat-item-desktop {
-            padding: 0.5rem 0.75rem !important;
-            min-height: 4rem !important;
+            padding: 0.875rem 0.5rem !important; /* Reduced padding */
+            min-height: 4rem !important; /* Reduced height */
             height: auto !important;
           }
           
           .dual-passion-stat-icon-desktop {
-            font-size: 1rem !important;
-            margin-bottom: 0.125rem !important;
+            font-size: 1.25rem !important; /* Slightly smaller */
+            margin-bottom: 0.375rem !important;
           }
           
           .dual-passion-stat-number-desktop {
-            font-size: 1rem !important;
-            margin-bottom: 0.0625rem !important;
+            font-size: 1.125rem !important; /* Slightly smaller */
+            margin-bottom: 0.125rem !important;
             line-height: 1.1 !important;
+            font-weight: 700 !important;
           }
           
           .dual-passion-stat-label-desktop {
-            font-size: 0.6875rem !important;
+            font-size: 0.75rem !important; /* Smaller */
             line-height: 1 !important;
+            font-weight: 600 !important;
           }
           
-          /* Desktop dual passion box - Proper sizing */
+          /* SMALLER Desktop dual passion box */
           .dual-passion-box-desktop {
-            max-width: 420px !important;
-            padding: 1.5rem !important;
+            max-width: 420px !important; /* Slightly smaller */
+            padding: 1.5rem !important; /* Reduced padding significantly */
+            height: auto !important;
+            min-height: auto !important;
           }
           
           .profile-image-container-desktop {
-            width: 5.5rem !important;
-            height: 5.5rem !important;
+            width: 5rem !important; /* Smaller */
+            height: 5rem !important; /* Smaller */
             margin-bottom: 1rem !important;
           }
           
           .profile-icon-desktop {
-            font-size: 1.75rem !important;
+            font-size: 2rem !important; /* Smaller */
           }
           
           .dual-passion-title-desktop {
-            font-size: 1.25rem !important;
-            margin-bottom: 0.125rem !important;
+            font-size: 1.5rem !important; /* Smaller */
+            margin-bottom: 0.25rem !important;
+            font-weight: 700 !important;
           }
           
           .dual-passion-subtitle-desktop {
-            font-size: 0.75rem !important;
-            margin-bottom: 0.75rem !important;
+            font-size: 0.875rem !important; /* Smaller */
+            margin-bottom: 1rem !important;
+            font-weight: 500 !important;
           }
           
           .dual-passion-stats-desktop {
-            gap: 0.5rem !important;
+            gap: 0.75rem !important; /* Smaller gap */
           }
         }
 
@@ -568,18 +579,12 @@ export default function Hero() {
           }
           
           .desktop-subtitle {
-            font-size: 1.25rem;
+            font-size: 1.375rem;
           }
           
-          /* Slightly larger on larger desktop */
           .dual-passion-box-desktop {
-            max-width: 440px !important;
-            padding: 1.75rem !important;
-          }
-          
-          /* Even more compact on larger screens */
-          .dual-passion-stat-item-desktop {
-            min-height: 4rem !important;
+            max-width: 450px !important;
+            padding: 1.75rem !important; /* Still smaller than before */
           }
         }
 
@@ -595,7 +600,7 @@ export default function Hero() {
       
       <section
         id="hero"
-        className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-gray-50/80 to-indigo-50/40 py-4 md:py-0"
+        className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-gray-50/80 to-indigo-50/40 py-8 md:py-0"
       >
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -619,8 +624,8 @@ export default function Hero() {
         </div>
 
         {/* Main Content Container */}
-        <div className="relative z-10 max-w-7xl mx-auto px-3 sm:px-5 lg:px-8 py-6 md:py-16 w-full">
-          <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center mobile-stack">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-16 w-full">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mobile-stack">
             
             {/* Left Content - Text Section */}
             <motion.div
@@ -633,42 +638,42 @@ export default function Hero() {
               }}
               className="md:text-left mobile-center"
             >
-              {/* Premium Badge - Left aligned on mobile */}
+              {/* Premium Badge */}
               <motion.div 
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 10 }}
                 transition={{ delay: 0.3 }}
-                className="inline-flex items-center gap-2 px-4 py-2 mb-4 md:mb-6 glass-card rounded-full shadow-lg mobile-badge"
+                className="inline-flex items-center gap-2 px-4 py-2.5 mb-5 md:mb-6 glass-card rounded-full shadow-lg mobile-badge"
               >
-                <div className="w-2 h-2 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full animate-pulse" />
-                <span className="text-xs md:text-sm font-semibold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
+                <div className="w-2.5 h-2.5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full animate-pulse" />
+                <span className="text-sm font-semibold bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
                   Creator × Restaurateur
                 </span>
               </motion.div>
 
               {/* Main Heading */}
-              <div className="mb-4 md:mb-6">
+              <div className="mb-5 md:mb-6">
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 10 }}
                   transition={{ delay: 0.4 }}
-                  className="text-base sm:text-lg md:text-2xl text-gray-800 mb-2"
+                  className="text-lg sm:text-xl md:text-2xl text-gray-800 mb-2"
                 >
                   Hi, I'm{" "}
-                  <span className="gradient-text font-bold">Amit Kumar</span>
+                  <span className="gradient-text font-bold text-lg md:text-2xl">Amit Kumar</span>
                 </motion.div>
                 
                 <motion.h1
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 10 }}
                   transition={{ delay: 0.5 }}
-                  className="font-bold mb-2"
+                  className="font-bold mb-3"
                 >
-                  <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mobile-heading-large desktop-heading mb-1 md:mb-2">
+                  <div className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl mobile-heading-large desktop-heading mb-2 md:mb-2">
                     Crafting{" "}
                     <span className="gradient-text">Digital Experiences</span>
                   </div>
-                  <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mobile-subheading desktop-subheading">
+                  <div className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl mobile-subheading desktop-subheading">
                     <span className="text-gray-400">&</span>{" "}
                     <span className="bg-gradient-to-r from-orange-500 via-red-500 to-orange-400 bg-clip-text text-transparent">
                       Culinary Delights
@@ -682,7 +687,7 @@ export default function Hero() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 10 }}
                 transition={{ delay: 0.6 }}
-                className="text-sm md:text-base text-gray-600 mb-4 md:mb-6 leading-relaxed max-w-xl desktop-subtitle mobile-subtitle"
+                className="text-base md:text-lg text-gray-700 mb-6 md:mb-8 leading-relaxed max-w-xl desktop-subtitle mobile-subtitle"
               >
                 Blending creativity with culinary excellence. Creating viral content 
                 that entertains millions, while serving authentic flavors at{" "}
@@ -692,28 +697,28 @@ export default function Hero() {
                 .
               </motion.p>
 
-              {/* Stats Grid - More compact */}
+              {/* Stats Grid - Fixed for mobile */}
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 10 }}
                 transition={{ delay: 0.7 }}
-                className="grid grid-cols-3 gap-2 md:gap-4 mb-4 max-w-md mobile-stats desktop-stats"
+                className="grid grid-cols-3 gap-3 md:gap-4 mb-5 max-w-md mobile-stats desktop-stats"
               >
                 {[
                   { 
-                    number: "1000+", 
+                    number: "500K+", 
                     label: "Followers", 
                     icon: "👥",
                     gradient: "from-indigo-400 to-purple-400"
                   },
                   { 
-                    number: "100K+", 
+                    number: "10M+", 
                     label: "Views", 
                     icon: "👀",
                     gradient: "from-purple-400 to-pink-400"
                   },
                   { 
-                    number: "4.4★", 
+                    number: "5★", 
                     label: "Rating", 
                     icon: "⭐",
                     gradient: "from-orange-400 to-red-400"
@@ -725,23 +730,23 @@ export default function Hero() {
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ delay: 0.8 + index * 0.1 }}
                     whileHover={{ y: -2 }}
-                    className="glass-card rounded-lg md:rounded-xl p-3 text-center cursor-pointer shadow-md md:shadow-lg flex flex-col items-center justify-center"
+                    className="glass-card rounded-xl md:rounded-xl p-3 text-center cursor-pointer shadow-md md:shadow-lg flex flex-col items-center justify-center desktop-stats-item"
                     style={{ minHeight: 'auto' }}
                   >
-                    <div className="text-base md:text-lg mb-1 bounce-gentle mobile-stats-icon">
+                    <div className="text-xl md:text-xl mb-1.5 bounce-gentle mobile-stats-icon desktop-stats-icon">
                       {stat.icon}
                     </div>
-                    <div className={`text-base md:text-xl font-bold bg-gradient-to-r ${stat.gradient} bg-clip-text text-transparent mb-0.5 mobile-stats-number`}>
+                    <div className={`text-lg md:text-xl font-bold bg-gradient-to-r ${stat.gradient} bg-clip-text text-transparent mb-1 mobile-stats-number desktop-stats-number`}>
                       {stat.number}
                     </div>
-                    <div className="text-xs md:text-sm text-gray-500 font-medium mobile-stats-label">
+                    <div className="text-sm md:text-sm text-gray-600 font-medium mobile-stats-label desktop-stats-label">
                       {stat.label}
                     </div>
                   </motion.div>
                 ))}
               </motion.div>
 
-              {/* CTA Buttons - Compact */}
+              {/* CTA Buttons */}
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 10 }}
@@ -750,27 +755,27 @@ export default function Hero() {
               >
                 <motion.button
                   onClick={() => scrollTo("creator")}
-                  className="mobile-btn desktop-btn bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg md:rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer flex items-center justify-center gap-1.5"
+                  className="mobile-btn desktop-btn bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-xl md:rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer flex items-center justify-center gap-2"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <span className="text-sm md:text-base bounce-gentle">🎬</span>
-                  <span>Watch Content</span>
+                  <span className="text-base md:text-lg bounce-gentle">🎬</span>
+                  <span className="text-sm md:text-base">Watch Content</span>
                 </motion.button>
 
                 <motion.button
                   onClick={() => scrollTo("hotel")}
-                  className="mobile-btn desktop-btn glass-card border border-gray-200 text-gray-800 font-semibold rounded-lg md:rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer flex items-center justify-center gap-1.5"
+                  className="mobile-btn desktop-btn glass-card border border-gray-200 text-gray-800 font-semibold rounded-xl md:rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 cursor-pointer flex items-center justify-center gap-2"
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <span className="text-sm md:text-base bounce-gentle">👨‍🍳</span>
-                  <span>Visit Restaurant</span>
+                  <span className="text-base md:text-lg bounce-gentle">👨‍🍳</span>
+                  <span className="text-sm md:text-base">Visit Restaurant</span>
                 </motion.button>
               </motion.div>
             </motion.div>
 
-            {/* Right Content - Simplified Visual Section */}
+            {/* Right Content - Dual Passion Box (Now properly sized) */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.95 }}
@@ -782,7 +787,6 @@ export default function Hero() {
               className="relative flex justify-center items-center mobile-simplify"
             >
               <div className="relative w-full flex justify-center">
-                {/* Main Visual Container */}
                 <motion.div
                   animate={{ y: [0, -8, 0] }}
                   transition={{ 
@@ -792,10 +796,10 @@ export default function Hero() {
                   }}
                   className="relative"
                 >
-                  {/* Main Glass Card - Compact */}
-                  <div className="glass-card rounded-xl md:rounded-2xl overflow-hidden shadow-lg dual-passion-box dual-passion-box-desktop">
-                    {/* Profile & Title - Compact */}
-                    <div className="flex flex-col items-center mb-3 md:mb-4">
+                  {/* Main Glass Card - Now properly sized */}
+                  <div className="glass-card rounded-2xl md:rounded-2xl overflow-hidden shadow-xl dual-passion-box dual-passion-box-desktop">
+                    {/* Profile & Title */}
+                    <div className="flex flex-col items-center mb-4 md:mb-5">
                       <div className="relative profile-image-container profile-image-container-desktop">
                         <motion.div
                           animate={{ rotateY: 360 }}
@@ -815,7 +819,7 @@ export default function Hero() {
                                   repeat: Infinity,
                                   ease: "easeInOut"
                                 }}
-                                className="text-2xl md:text-3xl profile-icon profile-icon-desktop"
+                                className="text-3xl md:text-4xl profile-icon profile-icon-desktop"
                               >
                                 🎭
                               </motion.div>
@@ -824,40 +828,40 @@ export default function Hero() {
                         </motion.div>
                       </div>
                       
-                      <div className="text-center mb-2">
-                        <h3 className="text-lg md:text-xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mb-1 dual-passion-title dual-passion-title-desktop">
+                      <div className="text-center mb-3">
+                        <h3 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent mb-1.5 dual-passion-title dual-passion-title-desktop">
                           Dual Passion
                         </h3>
-                        <p className="text-gray-600 text-xs md:text-sm dual-passion-subtitle dual-passion-subtitle-desktop">
+                        <p className="text-gray-600 text-base md:text-lg dual-passion-subtitle dual-passion-subtitle-desktop">
                           Content Creator × Restaurant Owner
                         </p>
                       </div>
                     </div>
 
-                    {/* Mini Stats - Ultra compact */}
-                    <div className="grid grid-cols-2 gap-2 md:gap-3 dual-passion-stats dual-passion-stats-desktop">
-                      <div className="rounded-lg bg-gradient-to-br from-indigo-50 to-purple-50 border border-indigo-100 flex flex-col items-center justify-center dual-passion-stat-item dual-passion-stat-item-desktop">
-                        <div className="flex items-center gap-0.5 mb-0.5">
-                          <div className="text-xs md:text-sm dual-passion-stat-icon dual-passion-stat-icon-desktop">🎥</div>
-                          <div className="text-xs font-medium text-indigo-600">Creator</div>
+                    {/* Mini Stats - Now properly sized */}
+                    <div className="grid grid-cols-2 gap-3 md:gap-4 dual-passion-stats dual-passion-stats-desktop">
+                      <div className="rounded-xl bg-gradient-to-br from-indigo-50 to-purple-50 border border-indigo-100 flex flex-col items-center justify-center dual-passion-stat-item dual-passion-stat-item-desktop">
+                        <div className="flex items-center gap-1.5 mb-1.5">
+                          <div className="text-xl md:text-xl dual-passion-stat-icon dual-passion-stat-icon-desktop">🎥</div>
+                          <div className="text-sm md:text-base font-semibold text-indigo-600">Creator</div>
                         </div>
-                        <div className="text-sm md:text-base font-bold text-indigo-700 dual-passion-stat-number dual-passion-stat-number-desktop">
-                          100K+
+                        <div className="text-xl md:text-2xl font-bold text-indigo-700 dual-passion-stat-number dual-passion-stat-number-desktop">
+                          10M+
                         </div>
-                        <div className="text-xs text-indigo-500 dual-passion-stat-label dual-passion-stat-label-desktop">
+                        <div className="text-sm md:text-sm text-indigo-600 dual-passion-stat-label dual-passion-stat-label-desktop">
                           Views
                         </div>
                       </div>
                       
-                      <div className="rounded-lg bg-gradient-to-br from-orange-50 to-red-50 border border-orange-100 flex flex-col items-center justify-center dual-passion-stat-item dual-passion-stat-item-desktop">
-                        <div className="flex items-center gap-0.5 mb-0.5">
-                          <div className="text-xs md:text-sm dual-passion-stat-icon dual-passion-stat-icon-desktop">🍛</div>
-                          <div className="text-xs font-medium text-orange-600">Restaurant</div>
+                      <div className="rounded-xl bg-gradient-to-br from-orange-50 to-red-50 border border-orange-100 flex flex-col items-center justify-center dual-passion-stat-item dual-passion-stat-item-desktop">
+                        <div className="flex items-center gap-1.5 mb-1.5">
+                          <div className="text-xl md:text-xl dual-passion-stat-icon dual-passion-stat-icon-desktop">🍛</div>
+                          <div className="text-sm md:text-base font-semibold text-orange-600">Restaurant</div>
                         </div>
-                        <div className="text-sm md:text-base font-bold text-orange-700 dual-passion-stat-number dual-passion-stat-number-desktop">
-                          4.4★
+                        <div className="text-xl md:text-2xl font-bold text-orange-700 dual-passion-stat-number dual-passion-stat-number-desktop">
+                          5★
                         </div>
-                        <div className="text-xs text-orange-500 dual-passion-stat-label dual-passion-stat-label-desktop">
+                        <div className="text-sm md:text-sm text-orange-600 dual-passion-stat-label dual-passion-stat-label-desktop">
                           Rating
                         </div>
                       </div>
@@ -874,10 +878,10 @@ export default function Hero() {
                           repeat: Infinity,
                           ease: "easeInOut"
                         }}
-                        className="absolute -top-2 -right-2 w-8 h-8"
+                        className="absolute -top-3 -right-3 w-10 h-10"
                       >
                         <div className="w-full h-full gradient-border rounded-lg glass-card flex items-center justify-center shadow-sm">
-                          <div className="text-xs">✨</div>
+                          <div className="text-sm">✨</div>
                         </div>
                       </motion.div>
 
@@ -889,10 +893,10 @@ export default function Hero() {
                           delay: 1,
                           ease: "easeInOut"
                         }}
-                        className="absolute -bottom-2 -left-2 w-8 h-8"
+                        className="absolute -bottom-3 -left-3 w-10 h-10"
                       >
                         <div className="w-full h-full gradient-border rounded-lg glass-card flex items-center justify-center shadow-sm">
-                          <div className="text-xs">🌶️</div>
+                          <div className="text-sm">🌶️</div>
                         </div>
                       </motion.div>
                     </>
@@ -907,24 +911,24 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: isVisible ? 1 : 0 }}
             transition={{ duration: 0.5, delay: 1.2 }}
-            className="absolute bottom-4 md:bottom-8 left-1/2 hidden md:flex transform -translate-x-1/2"
+            className="absolute bottom-6 md:bottom-8 left-1/2 hidden md:flex transform -translate-x-1/2"
           >
             <motion.button
               onClick={() => scrollTo("creator")}
               className="flex flex-col items-center gap-1 cursor-pointer group"
             >
-              <span className="text-xs font-medium text-gray-500 group-hover:text-indigo-600 transition-colors">
+              <span className="text-sm font-medium text-gray-500 group-hover:text-indigo-600 transition-colors">
                 Scroll to explore
               </span>
-              <div className="w-5 h-8 rounded-full border border-gray-300 group-hover:border-indigo-400 transition-colors flex justify-center pt-1">
+              <div className="w-6 h-10 rounded-full border border-gray-300 group-hover:border-indigo-400 transition-colors flex justify-center pt-2">
                 <motion.div
-                  animate={{ y: [0, 6, 0] }}
+                  animate={{ y: [0, 8, 0] }}
                   transition={{ 
                     duration: 1.5, 
                     repeat: Infinity, 
                     ease: "easeInOut"
                   }}
-                  className="w-0.5 h-2 rounded-full bg-gradient-to-b from-indigo-400 to-purple-400"
+                  className="w-1 h-3 rounded-full bg-gradient-to-b from-indigo-400 to-purple-400"
                 />
               </div>
             </motion.button>
