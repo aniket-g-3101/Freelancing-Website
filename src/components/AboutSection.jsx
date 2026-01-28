@@ -535,7 +535,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useState, useRef, useEffect } from "react";
 
 // // Import the image (make sure to adjust the path based on your project structure)
-// import amitImage from '/src/assets/images/amit.png';
+import amitImage from '/src/assets/images/amit.png';
 
 const aboutTabs = [
   {

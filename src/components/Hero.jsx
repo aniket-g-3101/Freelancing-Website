@@ -721,6 +721,8 @@ export default function Hero() {
         id="hero"
         className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-gray-50/80 to-indigo-50/40 py-8 md:py-0"
       >
+        {/* Enhanced Background Effects Layer */}
+        <BackgroundGrid />
         {/* Background Elements */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
           {/* Base Mesh Gradient */}
