@@ -5,6 +5,7 @@ import AboutSection from "./components/AboutSection";
 import SmoothScroll from "./components/smoothScroll";
 import HotelSection from "./components/HotelSection";
 import ContactSection from "./components/ContactSection";
+import Footer from "./components/Footer";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
             <CreatorSection/>
             <HotelSection/>
             <ContactSection/>
+            <Footer/>
       </SmoothScroll>
     </div>
   );
