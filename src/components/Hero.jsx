@@ -46,6 +46,38 @@ export default function Hero() {
           75% { transform: translateX(-3%) translateY(-2%); }
         }
 
+        @keyframes orbit-slow {
+          0% { transform: rotate(0deg) translateX(80px) rotate(0deg); }
+          100% { transform: rotate(360deg) translateX(80px) rotate(-360deg); }
+        }
+
+        @keyframes orbit-reverse {
+          0% { transform: rotate(0deg) translateX(60px) rotate(0deg); }
+          100% { transform: rotate(-360deg) translateX(60px) rotate(360deg); }
+        }
+
+        @keyframes pulse-glow {
+          0%, 100% { opacity: 0.15; transform: scale(1); }
+          50% { opacity: 0.25; transform: scale(1.05); }
+        }
+
+        @keyframes shimmer {
+          0% { background-position: -200% center; }
+          100% { background-position: 200% center; }
+        }
+
+        @keyframes float-drift {
+          0%, 100% { transform: translate(0, 0) rotate(0deg); }
+          25% { transform: translate(10px, -10px) rotate(5deg); }
+          50% { transform: translate(-5px, -20px) rotate(-3deg); }
+          75% { transform: translate(-10px, -10px) rotate(3deg); }
+        }
+
+        @keyframes gradient-rotate {
+          0% { filter: hue-rotate(0deg); }
+          100% { filter: hue-rotate(360deg); }
+        }
+
         .gradient-text {
           background: linear-gradient(
             90deg,
@@ -93,6 +125,7 @@ export default function Hero() {
           opacity: 0.15;
           z-index: 0;
           pointer-events: none;
+          animation: float-drift 8s ease-in-out infinite;
         }
 
         .bg-glow {
@@ -102,10 +135,87 @@ export default function Hero() {
           opacity: 0.2;
           z-index: 0;
           pointer-events: none;
+          animation: pulse-glow 6s ease-in-out infinite;
+        }
+
+        /* Enhanced Premium Background Effects */
+        .bg-mesh-gradient {
+          position: absolute;
+          inset: 0;
+          background: 
+            radial-gradient(circle at 20% 30%, rgba(102, 126, 234, 0.08) 0%, transparent 50%),
+            radial-gradient(circle at 80% 70%, rgba(245, 87, 108, 0.08) 0%, transparent 50%),
+            radial-gradient(circle at 50% 50%, rgba(118, 75, 162, 0.06) 0%, transparent 60%);
+          z-index: 0;
+          pointer-events: none;
+        }
+
+        .bg-shimmer-line {
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background: linear-gradient(
+            90deg,
+            transparent,
+            rgba(102, 126, 234, 0.4),
+            rgba(245, 87, 108, 0.4),
+            transparent
+          );
+          background-size: 200% 100%;
+          animation: shimmer 3s linear infinite;
+          z-index: 1;
+          pointer-events: none;
+        }
+
+        .bg-orb {
+          position: absolute;
+          border-radius: 50%;
+          z-index: 0;
+          pointer-events: none;
+          mix-blend-mode: screen;
+        }
+
+        .orb-floating {
+          animation: float-drift 12s ease-in-out infinite;
         }
 
         /* Mobile responsive styles */
         @media (max-width: 768px) {
+          .bg-icon {
+            font-size: 20px !important;
+            opacity: 0.12;
+            animation-duration: 10s;
+          }
+          
+          .bg-glow {
+            filter: blur(50px);
+            opacity: 0.18;
+            animation-duration: 8s;
+          }
+
+          .bg-mesh-gradient {
+            background: 
+              radial-gradient(circle at 20% 20%, rgba(102, 126, 234, 0.12) 0%, transparent 45%),
+              radial-gradient(circle at 80% 80%, rgba(245, 87, 108, 0.12) 0%, transparent 45%),
+              radial-gradient(circle at 50% 50%, rgba(118, 75, 162, 0.08) 0%, transparent 50%);
+          }
+
+          .bg-orb {
+            filter: blur(40px);
+            opacity: 0.15;
+          }
+
+          .bg-shimmer-line {
+            height: 1.5px;
+            background: linear-gradient(
+              90deg,
+              transparent,
+              rgba(102, 126, 234, 0.3),
+              rgba(245, 87, 108, 0.3),
+              transparent
+            );
+          }
+          
           .mobile-stack {
             display: flex;
             flex-direction: column;
@@ -169,10 +279,10 @@ export default function Hero() {
           }
           
           .mobile-stats > div {
-            padding: 0.75rem 0.5rem !important; /* Reduced padding */
+            padding: 0.75rem 0.5rem !important;
             min-height: auto !important;
-            height: auto !important; /* Changed to auto */
-            min-height: 4.5rem !important; /* Added min-height */
+            height: auto !important;
+            min-height: 4.5rem !important;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -180,18 +290,18 @@ export default function Hero() {
           }
           
           .mobile-stats-icon {
-            font-size: 1.25rem !important; /* Slightly smaller */
+            font-size: 1.25rem !important;
             margin-bottom: 0.375rem !important;
           }
           
           .mobile-stats-number {
-            font-size: 1.125rem !important; /* Smaller */
+            font-size: 1.125rem !important;
             margin-bottom: 0.125rem !important;
             line-height: 1.1;
           }
           
           .mobile-stats-label {
-            font-size: 0.6875rem !important; /* Smaller */
+            font-size: 0.6875rem !important;
             line-height: 1.2;
           }
           
@@ -205,7 +315,7 @@ export default function Hero() {
             width: 100% !important;
             max-width: 400px !important;
             margin: 0 auto;
-            padding: 1.5rem !important; /* Reduced padding */
+            padding: 1.5rem !important;
             height: auto !important;
             min-height: auto !important;
             border-radius: 20px !important;
@@ -213,53 +323,54 @@ export default function Hero() {
           
           /* FIXED: Adjusted stats boxes inside dual passion */
           .dual-passion-stats {
-            gap: 0.75rem !important; /* Reduced gap */
+            gap: 0.75rem !important;
             margin-top: 1rem !important;
           }
           
           .dual-passion-stat-item {
-            padding: 0.875rem 0.5rem !important; /* Reduced padding */
-            height: auto !important; /* Changed to auto */
-            min-height: 4rem !important; /* Reduced min-height */
+            padding: 0.875rem 0.5rem !important;
+            height: auto !important;
+            min-height: 6rem !important;
+            min-width : 9rem !important;
             border-radius: 12px !important;
           }
           
           .dual-passion-stat-icon {
-            font-size: 1.25rem !important; /* Smaller */
+            font-size: 1.25rem !important;
             margin-bottom: 0.375rem !important;
           }
           
           .dual-passion-stat-number {
-            font-size: 1.125rem !important; /* Smaller */
+            font-size: 1.125rem !important;
             margin-bottom: 0.125rem !important;
             line-height: 1.1 !important;
             font-weight: 700 !important;
           }
           
           .dual-passion-stat-label {
-            font-size: 0.75rem !important; /* Smaller */
+            font-size: 0.75rem !important;
             line-height: 1.2 !important;
             font-weight: 600 !important;
           }
           
           .profile-image-container {
-            width: 5rem !important; /* Smaller */
-            height: 5rem !important; /* Smaller */
+            width: 5rem !important;
+            height: 5rem !important;
             margin-bottom: 1rem !important;
           }
           
           .profile-icon {
-            font-size: 2rem !important; /* Smaller */
+            font-size: 2rem !important;
           }
           
           .dual-passion-title {
-            font-size: 1.5rem !important; /* Smaller */
+            font-size: 1.5rem !important;
             margin-bottom: 0.25rem !important;
             font-weight: 700 !important;
           }
           
           .dual-passion-subtitle {
-            font-size: 0.875rem !important; /* Smaller */
+            font-size: 0.875rem !important;
             margin-bottom: 1rem !important;
             font-weight: 500 !important;
             color: #4b5563 !important;
@@ -270,15 +381,6 @@ export default function Hero() {
             line-height: 1.6 !important;
             margin-bottom: 1.5rem !important;
             color: #374151 !important;
-          }
-          
-          .bg-icon {
-            opacity: 0.1;
-            font-size: 18px !important;
-          }
-          
-          .bg-glow {
-            filter: blur(40px);
           }
         }
 
@@ -311,7 +413,7 @@ export default function Hero() {
           }
           
           .mobile-stats > div {
-            padding: 0.625rem 0.375rem !important; /* Smaller */
+            padding: 0.625rem 0.375rem !important;
             min-height: 4rem !important;
           }
           
@@ -327,11 +429,11 @@ export default function Hero() {
           /* Better sizing on 640px */
           .dual-passion-box {
             max-width: 380px !important;
-            padding: 1.25rem !important; /* Smaller */
+            padding: 1.25rem !important;
           }
           
           .dual-passion-stat-item {
-            padding: 0.75rem 0.375rem !important; /* Smaller */
+            padding: 0.75rem 0.375rem !important;
             min-height: 3.75rem !important;
           }
           
@@ -387,7 +489,7 @@ export default function Hero() {
           }
           
           .mobile-stats > div {
-            padding: 0.5rem 0.25rem !important; /* Much smaller */
+            padding: 0.5rem 0.25rem !important;
             min-height: 3.5rem !important;
           }
           
@@ -410,7 +512,7 @@ export default function Hero() {
           
           .dual-passion-box {
             max-width: 350px !important;
-            padding: 1rem !important; /* Much smaller */
+            padding: 1rem !important;
           }
           
           .dual-passion-title {
@@ -422,7 +524,7 @@ export default function Hero() {
           }
           
           .dual-passion-stat-item {
-            padding: 0.5rem 0.25rem !important; /* Much smaller */
+            padding: 0.5rem 0.25rem !important;
             min-height: 3.25rem !important;
           }
           
@@ -466,7 +568,7 @@ export default function Hero() {
           }
           
           .mobile-stats > div {
-            padding: 0.375rem 0.125rem !important; /* Minimal padding */
+            padding: 0.375rem 0.125rem !important;
             min-height: 3rem !important;
           }
           
@@ -476,7 +578,7 @@ export default function Hero() {
           
           .dual-passion-box {
             max-width: 320px !important;
-            padding: 0.875rem !important; /* Minimal padding */
+            padding: 0.875rem !important;
           }
           
           .dual-passion-title {
@@ -484,23 +586,39 @@ export default function Hero() {
           }
           
           .dual-passion-stat-item {
-            padding: 0.375rem 0.125rem !important; /* Minimal padding */
+            padding: 0.375rem 0.125rem !important;
             min-height: 3rem !important;
           }
         }
 
         /* Desktop styles - OPTIMIZED AND SMALLER */
         @media (min-width: 769px) {
+          .bg-icon {
+            font-size: 32px;
+            opacity: 0.15;
+          }
+
+          .bg-glow {
+            filter: blur(80px);
+            opacity: 0.2;
+          }
+
+          .bg-orb {
+            filter: blur(60px);
+            opacity: 0.2;
+          }
+          
           .desktop-btn {
-            padding: 0.875rem 2rem;
+            padding: 0.875rem 1rem;
             font-size: 1rem;
             height: 3rem;
             border-radius: 12px;
+            margin-right: 0.95rem;
           }
           
           .desktop-stats > div {
-            padding: 1rem; /* Reduced padding */
-            min-height: 4rem !important; /* Reduced height */
+            padding: 1rem;
+            min-height: 4rem !important;
           }
           
           .desktop-heading {
@@ -515,61 +633,61 @@ export default function Hero() {
           
           /* SMALLER Desktop dual passion stats */
           .dual-passion-stat-item-desktop {
-            padding: 0.875rem 0.5rem !important; /* Reduced padding */
-            min-height: 4rem !important; /* Reduced height */
+            padding: 0.875rem 0.5rem !important;
+            min-height: 4rem !important;
             height: auto !important;
           }
           
           .dual-passion-stat-icon-desktop {
-            font-size: 1.25rem !important; /* Slightly smaller */
+            font-size: 1.25rem !important;
             margin-bottom: 0.375rem !important;
           }
           
           .dual-passion-stat-number-desktop {
-            font-size: 1.125rem !important; /* Slightly smaller */
+            font-size: 1.125rem !important;
             margin-bottom: 0.125rem !important;
             line-height: 1.1 !important;
             font-weight: 700 !important;
           }
           
           .dual-passion-stat-label-desktop {
-            font-size: 0.75rem !important; /* Smaller */
+            font-size: 0.75rem !important;
             line-height: 1 !important;
             font-weight: 600 !important;
           }
           
           /* SMALLER Desktop dual passion box */
           .dual-passion-box-desktop {
-            max-width: 420px !important; /* Slightly smaller */
-            padding: 1.5rem !important; /* Reduced padding significantly */
+            max-width: 420px !important;
+            padding: 1.5rem !important;
             height: auto !important;
             min-height: auto !important;
           }
           
           .profile-image-container-desktop {
-            width: 5rem !important; /* Smaller */
-            height: 5rem !important; /* Smaller */
+            width: 5rem !important;
+            height: 5rem !important;
             margin-bottom: 1rem !important;
           }
           
           .profile-icon-desktop {
-            font-size: 2rem !important; /* Smaller */
+            font-size: 2rem !important;
           }
           
           .dual-passion-title-desktop {
-            font-size: 1.5rem !important; /* Smaller */
+            font-size: 1.5rem !important;
             margin-bottom: 0.25rem !important;
             font-weight: 700 !important;
           }
           
           .dual-passion-subtitle-desktop {
-            font-size: 0.875rem !important; /* Smaller */
+            font-size: 0.875rem !important;
             margin-bottom: 1rem !important;
             font-weight: 500 !important;
           }
           
           .dual-passion-stats-desktop {
-            gap: 0.75rem !important; /* Smaller gap */
+            gap: 0.75rem !important;
           }
         }
 
@@ -584,7 +702,7 @@ export default function Hero() {
           
           .dual-passion-box-desktop {
             max-width: 450px !important;
-            padding: 1.75rem !important; /* Still smaller than before */
+            padding: 1.75rem !important;
           }
         }
 
@@ -602,11 +720,26 @@ export default function Hero() {
         id="hero"
         className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-white via-gray-50/80 to-indigo-50/40 py-8 md:py-0"
       >
-        {/* Background Elements */}
+        {/* Enhanced Background Effects Layer */}
         <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {/* Base Mesh Gradient */}
+          <div className="bg-mesh-gradient"></div>
+          
+          {/* Animated Glowing Orbs - Enhanced */}
           <div className="bg-glow top-1/4 left-10 w-96 h-96 bg-gradient-to-br from-indigo-200/50 to-purple-200/50 pan-move"></div>
           <div className="bg-glow bottom-1/3 right-10 w-[500px] h-[500px] bg-gradient-to-br from-orange-200/40 to-red-200/40 pan-move" style={{animationDelay: '3s'}}></div>
           
+          {/* Additional Ambient Orbs for Premium Feel */}
+          <div className="bg-orb orb-floating top-1/2 left-1/4 w-64 h-64 bg-gradient-to-br from-purple-300/30 to-pink-300/30" style={{animationDelay: '1s'}}></div>
+          <div className="bg-orb orb-floating bottom-1/4 right-1/3 w-80 h-80 bg-gradient-to-br from-blue-300/25 to-indigo-300/25" style={{animationDelay: '2s'}}></div>
+          
+          {/* Top Shimmer Line */}
+          <div className="bg-shimmer-line top-0"></div>
+          
+          {/* Bottom Shimmer Line */}
+          <div className="bg-shimmer-line bottom-0" style={{animationDelay: '1.5s'}}></div>
+          
+          {/* Floating Icons with Enhanced Animation */}
           {["🎬", "📹", "🎥", "🍳", "🍛", "🌟", "🔥", "🥘"].map((icon, index) => (
             <div 
               key={index}
@@ -614,8 +747,24 @@ export default function Hero() {
               style={{
                 top: `${10 + Math.sin(index) * 40}%`,
                 left: `${5 + index * 7}%`,
-                animationDelay: `${index * 0.3}s`,
-                fontSize: isMobile ? '16px' : '32px',
+                animationDelay: `${index * 0.5}s`,
+                fontSize: isMobile ? '20px' : '32px',
+              }}
+            >
+              {icon}
+            </div>
+          ))}
+          
+          {/* Additional floating icons for depth (mobile optimized) */}
+          {!isMobile && ["✨", "💫", "⭐", "🌶️"].map((icon, index) => (
+            <div 
+              key={`extra-${index}`}
+              className="bg-icon"
+              style={{
+                top: `${60 + index * 10}%`,
+                right: `${10 + index * 15}%`,
+                animationDelay: `${index * 0.7}s`,
+                opacity: 0.1,
               }}
             >
               {icon}
@@ -697,7 +846,7 @@ export default function Hero() {
                 .
               </motion.p>
 
-              {/* Stats Grid - Fixed for mobile */}
+              {/* Stats Grid */}
               <motion.div
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 10 }}
@@ -775,7 +924,7 @@ export default function Hero() {
               </motion.div>
             </motion.div>
 
-            {/* Right Content - Dual Passion Box (Now properly sized) */}
+            {/* Right Content - Dual Passion Box */}
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: isVisible ? 1 : 0, scale: isVisible ? 1 : 0.95 }}
@@ -796,7 +945,7 @@ export default function Hero() {
                   }}
                   className="relative"
                 >
-                  {/* Main Glass Card - Now properly sized */}
+                  {/* Main Glass Card */}
                   <div className="glass-card rounded-2xl md:rounded-2xl overflow-hidden shadow-xl dual-passion-box dual-passion-box-desktop">
                     {/* Profile & Title */}
                     <div className="flex flex-col items-center mb-4 md:mb-5">
@@ -838,7 +987,7 @@ export default function Hero() {
                       </div>
                     </div>
 
-                    {/* Mini Stats - Now properly sized */}
+                    {/* Mini Stats */}
                     <div className="grid grid-cols-2 gap-3 md:gap-4 dual-passion-stats dual-passion-stats-desktop">
                       <div className="rounded-xl bg-gradient-to-br from-indigo-50 to-purple-50 border border-indigo-100 flex flex-col items-center justify-center dual-passion-stat-item dual-passion-stat-item-desktop">
                         <div className="flex items-center gap-1.5 mb-1.5">
