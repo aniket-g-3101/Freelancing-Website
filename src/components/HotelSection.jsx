@@ -1,6 +1,7 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect, useRef } from "react";
 import { MapPin, Star, Users, Instagram, ChevronRight, Heart, Phone, Navigation, X, ChevronLeft, ChevronRight as ChevronRightIcon } from "lucide-react";
+import BackgroundGrid from "../background/BackgroundGrid";
 
 // Import actual hotel images
 import hotel1 from "../assets/hotel/hotel1.jpg";
@@ -71,7 +72,8 @@ export default function HotelSection() {
   };
 
   return (
-    <section id="hotel" className="py-6 md:py-12 bg-white">
+    <section id="hotel" className="relative py-6 md:py-12 bg-white">
+        <BackgroundGrid />
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         {/* Compact Header */}
         <motion.div
@@ -81,6 +83,7 @@ export default function HotelSection() {
           transition={{ duration: 0.4 }}
           className="text-center mb-6 md:mb-8"
         >
+        
           <div className="inline-flex items-center gap-1 px-2 md:px-3 py-1 md:py-1.5 bg-blue-50 rounded-full border border-blue-200 mb-2 md:mb-3">
             <div className="w-1 h-1 md:w-1.5 md:h-1.5 bg-blue-500 rounded-full" />
             <span className="text-xs font-medium text-blue-700 uppercase tracking-wider">

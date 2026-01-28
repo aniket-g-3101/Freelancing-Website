@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { useState, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import BackgroundGrid from "../background/BackgroundGrid";
 
 const reels = [
   {
@@ -88,6 +89,9 @@ export default function CreatorReels() {
 
   return (
     <section id="creator" className="py-6 md:py-10 relative overflow-hidden bg-white">
+
+      <BackgroundGrid />
+
       {/* Subtle Background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-gradient-to-b from-blue-500/1 via-purple-500/0.5 to-transparent rounded-full blur-3xl" />
