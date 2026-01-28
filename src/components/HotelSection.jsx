@@ -332,7 +332,7 @@ export default function HotelSection() {
                   </motion.a>
                   
                   <motion.a
-                    href="tel:+11234567890"
+                    href="tel:+91 99212 66223"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                     className="py-2.5 md:py-3 bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs md:text-xs font-medium md:font-semibold rounded-md md:rounded-lg hover:shadow transition-all flex items-center justify-center gap-1.5 md:gap-1.5"

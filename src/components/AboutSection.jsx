@@ -203,14 +203,14 @@ export default function AboutSection() {
           transition={{ duration: 0.4, delay: 0.1 }}
           className="md:hidden mb-6"
         >
-          <div className="bg-gradient-to-br from-white to-gray-50 rounded-xl p-4 border border-gray-100 shadow-sm overflow-hidden">
+          <div className="bg-gradient-to-br from-white to-gray-50 rounded-xl p-2.5 md:p-4 border-2 border-gray-200 shadow-sm overflow-hidden">
             {/* Image Container */}
-            <div className="relative mb-4">
+            <div className="relative mb-2.5 md:mb-4">
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: imageLoaded ? 1 : 0, scale: imageLoaded ? 1 : 0.95 }}
                 transition={{ duration: 0.5 }}
-                className="relative w-full h-48 rounded-lg overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200"
+                className="relative w-full h-36 md:h-48 rounded-lg overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200"
               >
                 {/* Profile Image */}
                 {/* <img
@@ -242,12 +242,12 @@ export default function AboutSection() {
               <p className="text-sm text-gray-600 mb-3">Digital Creator & Restaurateur</p>
               
               {/* Stats */}
-              <div className="grid grid-cols-2 gap-2 mb-4">
-                <div className="text-center p-2 bg-white/80 rounded-lg border border-gray-100">
+              <div className="grid grid-cols-2 gap-1.5 md:gap-2 mb-2.5 md:mb-4">
+                <div className="text-center p-1.5 md:p-2 bg-white/80 rounded-lg border-2 border-gray-200">
                   <div className="text-sm font-bold text-gray-900">100K+</div>
                   <div className="text-xs text-gray-500">Followers</div>
                 </div>
-                <div className="text-center p-2 bg-white/80 rounded-lg border border-gray-100">
+                <div className="text-center p-1.5 md:p-2 bg-white/80 rounded-lg border-2 border-gray-200">
                   <div className="text-sm font-bold text-gray-900">4.4★</div>
                   <div className="text-xs text-gray-500">Rating</div>
                 </div>
@@ -298,7 +298,7 @@ export default function AboutSection() {
               exit={{ opacity: 0, x: isMobile ? (activeTab === 'creator' ? -20 : 20) : 0 }}
               transition={{ duration: 0.2 }}
               id={`tab-content-${activeTab}`}
-              className="bg-gradient-to-br from-white to-gray-50/50 rounded-xl p-4 md:p-6 border border-gray-100 shadow-sm"
+              className="bg-gradient-to-br from-white to-gray-50/50 rounded-xl p-3 md:p-6 border-2 border-gray-200 shadow-sm"
             >
               {/* Content Header */}
               <div className="mb-4 md:mb-6">
@@ -321,14 +321,14 @@ export default function AboutSection() {
               </div>
 
               {/* Stats Grid - Responsive */}
-              <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 md:gap-3 mb-4 md:mb-6">
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5 md:gap-3 mb-3 md:mb-6">
                 {aboutContent[activeTab].stats.map((stat, index) => (
                   <motion.div
                     key={index}
                     initial={{ opacity: 0, scale: 0.9 }}
                     animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.2, delay: index * 0.05 }}
-                    className="text-center p-2 md:p-3 bg-white/80 rounded-lg border border-gray-100"
+                    className="text-center p-1.5 md:p-3 bg-white/80 rounded-lg border-2 border-gray-200"
                   >
                     <div className="text-base mb-1">{stat.icon}</div>
                     <div className="text-base md:text-lg font-bold text-gray-900 mb-0.5">
@@ -347,7 +347,7 @@ export default function AboutSection() {
                     initial={{ opacity: 0, y: 5 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.2, delay: index * 0.1 }}
-                    className="p-3 bg-white/80 rounded-lg border border-gray-100 hover:border-gray-200 transition-colors"
+                    className="p-2 md:p-3 bg-white/80 rounded-lg border-2 border-gray-200 hover:border-gray-300 transition-colors"
                   >
                     <div className="flex items-start gap-3">
                       <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-indigo-500/10 to-purple-500/10 flex items-center justify-center flex-shrink-0">
@@ -373,14 +373,12 @@ export default function AboutSection() {
                 transition={{ duration: 0.2, delay: 0.3 }}
                 className="mt-6 pt-4 border-t border-gray-100"
               >
-                <div className={`flex ${isMobile ? 'flex-col' : 'gap-3'}`}>
+                <div className="flex gap-3">
                   <motion.button
                     onClick={() => scrollToSection(activeTab === 'creator' ? 'creator' : 'hotel')}
-                    whileHover={{ scale: isMobile ? 1 : 1.02 }}
+                    whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className={`${
-                      isMobile ? 'w-full mb-2' : 'flex-1'
-                    } inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-sm font-medium rounded-lg hover:shadow transition-all duration-200`}
+                    className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-gradient-to-r from-indigo-600 to-purple-600 text-white text-sm font-medium rounded-lg hover:shadow transition-all duration-200"
                   >
                     <span>
                       {activeTab === 'creator' ? 'View Content' : 
@@ -393,11 +391,9 @@ export default function AboutSection() {
                   
                   <motion.button
                     onClick={() => scrollToSection('contact')}
-                    whileHover={{ scale: isMobile ? 1 : 1.02 }}
+                    whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
-                    className={`${
-                      isMobile ? 'w-full' : 'flex-1'
-                    } inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white text-gray-900 text-sm font-medium rounded-lg border border-gray-200 hover:border-indigo-300 hover:shadow transition-all duration-200`}
+                    className="flex-1 inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-white text-gray-900 text-sm font-medium rounded-lg border border-gray-200 hover:border-indigo-300 hover:shadow transition-all duration-200"
                   >
                     <span>Contact</span>
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
