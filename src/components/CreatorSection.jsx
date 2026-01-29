@@ -2,12 +2,17 @@ import { motion } from "framer-motion";
 import { useState, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import BackgroundGrid from "../background/BackgroundGrid";
+import reel1 from "../assets/reels/reel1.png"
+import reel2 from "../assets/reels/reel2.png"
+import reel3 from "../assets/reels/reel3.png"
+import reel4 from "../assets/reels/reel4.png"
+import reel5 from "../assets/reels/reel5.png"
 
 const reels = [
   {
     id: 1,
     url: "https://www.instagram.com/reel/DK9cfq0orP-/",
-    thumbnail: "/src/assets/reels/reel1.png",
+    thumbnail: {reel1},
     title: "Reaction 😅The heaviest tea is from Jaishankar Kundacha ☕️",
     duration: "",
     category: "Comedy",
@@ -16,7 +21,7 @@ const reels = [
   {
     id: 2,
     url: "https://www.instagram.com/reel/DT-Wc86DzZR/",
-    thumbnail: "/src/assets/reels/reel2.png",
+    thumbnail: {reel2},
     title: "call miss jhalel chalat nhay 😅💀",
     views: "",
     likes: "",
@@ -27,7 +32,7 @@ const reels = [
   {
     id: 3,
     url: "https://www.instagram.com/reel/DT5LuRhD5gM/",
-    thumbnail: "/src/assets/reels/reel3.png",
+    thumbnail: {reel3},
     title: "barobar ahe ka ?? 🤔😅",
     views: "",
     likes: "",
@@ -38,7 +43,7 @@ const reels = [
   {
     id: 4,
     url: "https://www.instagram.com/reel/DT7wATUD5v5/",
-    thumbnail: "/src/assets/reels/reel4.png",
+    thumbnail: {reel4},
     title: "khar ahe ka solapurkarnno?? 🫢🤔",
     views: "",
     likes: "",
@@ -49,7 +54,7 @@ const reels = [
   {
     id: 5,
     url: "https://www.instagram.com/reel/DT2l1CxD7ZL/",
-    thumbnail: "/src/assets/reels/reel5.png",
+    thumbnail: {reel5},
     title: "vegl samju naka ohh 🤣😅",
     views: "",
     likes: "",
