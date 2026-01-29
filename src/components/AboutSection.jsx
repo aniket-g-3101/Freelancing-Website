@@ -571,7 +571,7 @@ export default function AboutSection() {
             <div className="grid grid-cols-2 gap-2 mb-4">
               <div className="text-center p-2 bg-white/80 rounded-lg border border-gray-100">
                 <div className="text-sm font-bold text-gray-900">100K+</div>
-                <div className="text-xs text-gray-500">Followers</div>
+                <div className="text-xs text-gray-500">Views</div>
               </div>
               <div className="text-center p-2 bg-white/80 rounded-lg border border-gray-100">
                 <div className="text-sm font-bold text-gray-900">4.4★</div>

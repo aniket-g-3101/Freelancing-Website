@@ -858,19 +858,19 @@ export default function Hero() {
               >
                 {[
                   { 
-                    number: "500K+", 
+                    number: "1000+", 
                     label: "Followers", 
                     icon: "👥",
                     gradient: "from-indigo-400 to-purple-400"
                   },
                   { 
-                    number: "10M+", 
+                    number: "100K+", 
                     label: "Views", 
                     icon: "👀",
                     gradient: "from-purple-400 to-pink-400"
                   },
                   { 
-                    number: "5★", 
+                    number: "4.4★", 
                     label: "Rating", 
                     icon: "⭐",
                     gradient: "from-orange-400 to-red-400"
@@ -998,7 +998,7 @@ export default function Hero() {
                           <div className="text-sm md:text-base font-semibold text-indigo-600">Creator</div>
                         </div>
                         <div className="text-xl md:text-2xl font-bold text-indigo-700 dual-passion-stat-number dual-passion-stat-number-desktop">
-                          10M+
+                          100K+
                         </div>
                         <div className="text-sm md:text-sm text-indigo-600 dual-passion-stat-label dual-passion-stat-label-desktop">
                           Views
@@ -1011,7 +1011,7 @@ export default function Hero() {
                           <div className="text-sm md:text-base font-semibold text-orange-600">Restaurant</div>
                         </div>
                         <div className="text-xl md:text-2xl font-bold text-orange-700 dual-passion-stat-number dual-passion-stat-number-desktop">
-                          5★
+                          4.4★
                         </div>
                         <div className="text-sm md:text-sm text-orange-600 dual-passion-stat-label dual-passion-stat-label-desktop">
                           Rating
