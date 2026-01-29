@@ -12,7 +12,7 @@ const reels = [
   {
     id: 1,
     url: "https://www.instagram.com/reel/DK9cfq0orP-/",
-    thumbnail: {reel1},
+    thumbnail: reel1,
     title: "Reaction 😅The heaviest tea is from Jaishankar Kundacha ☕️",
     duration: "",
     category: "Comedy",
@@ -21,7 +21,7 @@ const reels = [
   {
     id: 2,
     url: "https://www.instagram.com/reel/DT-Wc86DzZR/",
-    thumbnail: {reel2},
+    thumbnail: reel2,
     title: "call miss jhalel chalat nhay 😅💀",
     views: "",
     likes: "",
@@ -32,7 +32,7 @@ const reels = [
   {
     id: 3,
     url: "https://www.instagram.com/reel/DT5LuRhD5gM/",
-    thumbnail: {reel3},
+    thumbnail: reel3,
     title: "barobar ahe ka ?? 🤔😅",
     views: "",
     likes: "",
@@ -43,7 +43,7 @@ const reels = [
   {
     id: 4,
     url: "https://www.instagram.com/reel/DT7wATUD5v5/",
-    thumbnail: {reel4},
+    thumbnail:reel4,
     title: "khar ahe ka solapurkarnno?? 🫢🤔",
     views: "",
     likes: "",
@@ -54,7 +54,7 @@ const reels = [
   {
     id: 5,
     url: "https://www.instagram.com/reel/DT2l1CxD7ZL/",
-    thumbnail: {reel5},
+    thumbnail: reel5,
     title: "vegl samju naka ohh 🤣😅",
     views: "",
     likes: "",
