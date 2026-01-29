@@ -2,7 +2,7 @@ import Navbar from "./components/Navbar";
 import CreatorSection from "./components/CreatorSection";
 import Hero from "./components/Hero";
 import AboutSection from "./components/AboutSection";
-import SmoothScroll from "./components/smoothScroll";
+import SmoothScroll from "./components/SmoothScroll";
 import HotelSection from "./components/HotelSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
